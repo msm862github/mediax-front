@@ -186,10 +186,14 @@ function initializeCards() {
 }
 
 function handlePlayClick(card) {
-    const title = card.querySelector('.card-title').textContent;
+    const id = card.dataset.id || card.dataset.contentId || card.querySelector('.card-title')?.textContent?.trim();
+    const title = card.querySelector('.card-title')?.textContent || id;
     console.log('Playing:', title);
-    // TODO: Navigate to player page or open video modal
     showNotification('جاري تشغيل المحتوى...', 'success');
+    // Navigate to player page with content id
+    if (id) {
+        window.location.href = `player.html?content=${encodeURIComponent(id)}`;
+    }
 }
 
 function handleAddToList(card) {
@@ -227,10 +231,12 @@ function handleFavorite(card) {
 }
 
 function handleCardClick(card) {
-    const title = card.querySelector('.card-title').textContent;
+    const id = card.dataset.id || card.dataset.contentId || card.querySelector('.card-title')?.textContent?.trim();
+    const title = card.querySelector('.card-title')?.textContent || id;
     console.log('Viewing details for:', title);
-    // TODO: Navigate to details page
-    // window.location.href = `details.html?id=${cardId}`;
+    if (id) {
+        window.location.href = `details.html?id=${encodeURIComponent(id)}`;
+    }
 }
 
 // Scroll Animations

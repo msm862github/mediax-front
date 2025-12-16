@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشغل MediaX</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container header-content">
+            <div class="logo"><a href="index.html">
+                    <h1>Media<span class="logo-highlight">X</span></h1>
+                </a></div>
+        </div>
+    </header>
+
+    <main style="padding-top:110px;">
+        <div class="container">
+            <h2 id="playerTitle">جارٍ التحميل ...</h2>
+            <div style="margin-top:1rem;">
+                <video id="videoPlayer" controls
+                    style="width:100%; max-height:70vh; background:#000; border-radius:8px;">
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                        type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو
+                </video>
+            </div>
+            <div style="margin-top:1rem; display:flex; gap:1rem; align-items:center;">
+                <button id="saveProgressBtn" class="btn btn-secondary">حفظ التقدم</button>
+                <button id="clearProgressBtn" class="btn">إعادة البدء</button>
+                <div id="progressInfo" style="color:var(--text-secondary)"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/player.js"></script>
+</body>
+
+</html>
