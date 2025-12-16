@@ -24,9 +24,41 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSearch();
     initializeSliders();
     initializeMobileMenu();
+    normalizeContentIds();
     initializeCards();
     initializeScrollAnimations();
 });
+
+// Assign deterministic data-id attributes to static cards missing them
+function normalizeContentIds() {
+    const cards = document.querySelectorAll('.content-card');
+    const seen = new Set();
+    function slugify(text) {
+        return (text || '').toString().trim().toLowerCase()
+            .replace(/[^\w\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-');
+    }
+
+    cards.forEach((card, idx) => {
+        if (!card.dataset.id) {
+            const title = card.querySelector('.card-title')?.textContent || `content-${idx + 1}`;
+            let base = slugify(title) || `content-${idx + 1}`;
+            let id = base;
+            let i = 1;
+            while (seen.has(id)) {
+                id = `${base}-${i++}`;
+            }
+            seen.add(id);
+            card.dataset.id = id;
+        } else {
+            seen.add(card.dataset.id);
+        }
+    });
+
+    // Remove inline onclick handlers from play buttons so JS handlers manage navigation
+    document.querySelectorAll('.play-btn[onclick]').forEach(btn => btn.removeAttribute('onclick'));
+}
 
 // Header Scroll Effect
 function initializeHeader() {
@@ -183,6 +215,24 @@ function initializeCards() {
             handleCardClick(card);
         });
     });
+
+    // Apply saved states (watchlist / favorites) if MediaApi available
+    (async function applySavedStates() {
+        if (!window.MediaApi) return;
+        try {
+            const watchlist = await window.MediaApi.getWatchlist();
+            const favorites = await window.MediaApi.getFavorites();
+            cards.forEach(card => {
+                const id = card.dataset.id;
+                const addBtn = card.querySelector('.action-btn:first-child');
+                const favBtn = card.querySelector('.action-btn:last-child');
+                if (id && watchlist.includes(id) && addBtn) addBtn.classList.add('added');
+                if (id && favorites.includes(id) && favBtn) favBtn.classList.add('favorited');
+            });
+        } catch (e) {
+            // ignore
+        }
+    })();
 }
 
 function handlePlayClick(card) {
@@ -197,37 +247,50 @@ function handlePlayClick(card) {
 }
 
 function handleAddToList(card) {
-    const title = card.querySelector('.card-title').textContent;
-    console.log('Adding to list:', title);
-    // TODO: Add to user's watchlist
-    showNotification('تمت الإضافة إلى قائمة المشاهدة', 'success');
-
-    // Visual feedback
+    const title = card.querySelector('.card-title')?.textContent;
+    const id = card.dataset.id;
+    if (!id || !window.MediaApi) {
+        showNotification('حدث خطأ في الإضافة', 'error');
+        return;
+    }
     const btn = card.querySelector('.action-btn:first-child');
-    btn.style.background = 'var(--primary-color)';
-    setTimeout(() => {
-        btn.style.background = '';
-    }, 1000);
+    (async () => {
+        try {
+            const added = await window.MediaApi.toggleWatchlist(id);
+            if (added) {
+                btn.classList.add('added');
+                showNotification('تمت الإضافة إلى قائمة المشاهدة', 'success');
+            } else {
+                btn.classList.remove('added');
+                showNotification('تمت الإزالة من قائمة المشاهدة', 'info');
+            }
+        } catch (e) {
+            showNotification('حدث خطأ في الإضافة', 'error');
+        }
+    })();
 }
 
 function handleFavorite(card) {
-    const title = card.querySelector('.card-title').textContent;
+    const id = card.dataset.id;
     const btn = card.querySelector('.action-btn:last-child');
-    const isFavorited = btn.classList.contains('favorited');
-
-    if (isFavorited) {
-        btn.classList.remove('favorited');
-        console.log('Removed from favorites:', title);
-        showNotification('تمت الإزالة من المفضلة', 'info');
-    } else {
-        btn.classList.add('favorited');
-        console.log('Added to favorites:', title);
-        showNotification('تمت الإضافة إلى المفضلة', 'success');
-
-        // Visual feedback
-        btn.style.background = 'var(--primary-color)';
-        btn.querySelector('svg').style.fill = 'currentColor';
+    if (!id || !window.MediaApi) {
+        showNotification('حدث خطأ', 'error');
+        return;
     }
+    (async () => {
+        try {
+            const favorited = await window.MediaApi.toggleFavorite(id);
+            if (favorited) {
+                btn.classList.add('favorited');
+                showNotification('تمت الإضافة إلى المفضلة', 'success');
+            } else {
+                btn.classList.remove('favorited');
+                showNotification('تمت الإزالة من المفضلة', 'info');
+            }
+        } catch (e) {
+            showNotification('حدث خطأ', 'error');
+        }
+    })();
 }
 
 function handleCardClick(card) {

@@ -4,6 +4,7 @@
     const KEY_FAV = 'mediax_favorites';
     const KEY_LIST = 'mediax_watchlist';
     const KEY_HISTORY = 'mediax_history';
+    const KEY_SUB = 'mediax_subscription';
 
     function load(key) {
         try {
@@ -90,6 +91,41 @@
             const history = load(KEY_HISTORY);
             const item = history.find(h => h.id === id);
             return item ? item.position : 0;
+        }
+,
+        // Subscription simulation
+        async subscribe(plan, paymentInfo) {
+            await simulate(800);
+            const sub = {
+                plan: plan || 'basic',
+                startedAt: Date.now(),
+                // expire in 30 days for monthly plans
+                expiresAt: Date.now() + (30 * 24 * 60 * 60 * 1000),
+                payment: { method: paymentInfo?.method || 'card', last4: paymentInfo?.last4 || null }
+            };
+            save(KEY_SUB, sub);
+            return sub;
+        },
+
+        async cancelSubscription() {
+            await simulate(200);
+            localStorage.removeItem(KEY_SUB);
+            return true;
+        },
+
+        async getSubscription() {
+            await simulate(100);
+            try {
+                return JSON.parse(localStorage.getItem(KEY_SUB) || 'null');
+            } catch (e) {
+                return null;
+            }
+        },
+
+        async isSubscribed() {
+            const sub = await this.getSubscription();
+            if (!sub) return false;
+            return (sub.expiresAt && sub.expiresAt > Date.now());
         }
     };
 
