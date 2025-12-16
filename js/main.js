@@ -469,6 +469,14 @@ console.log('MediaX initialized successfully! 🎬');
         // After adding cards, initialize lazy loading and card behaviors
         initializeLazyLoading();
         initializeCards();
+
+        // Update watchlist count if present
+        const watchlistCountEl = document.getElementById('watchlistCount');
+        if (watchlistCountEl) {
+            const grid = document.querySelector('.content-grid');
+            const count = grid ? grid.querySelectorAll('.content-card').length : 0;
+            watchlistCountEl.textContent = `لديك ${count} عناصر في القائمة`;
+        }
     }
 
     if (document.readyState === 'loading') {
