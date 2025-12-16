@@ -219,65 +219,75 @@ function showReplyForm(btn) {
     });
 }
 
-// Add to Watchlist
+// Add to Watchlist (uses `js/api.js` MediaApi)
 const addToListBtn = document.querySelector('.details-actions .btn-secondary');
+function getContentIdFromPage() {
+    const page = document.querySelector('.details-page') || document.body;
+    return page.dataset.id || page.dataset.contentId || document.querySelector('.details-title')?.dataset.id || document.querySelector('.details-title')?.textContent?.trim();
+}
+
 if (addToListBtn) {
-    addToListBtn.addEventListener('click', () => {
-        const title = document.querySelector('.details-title')?.textContent;
-        console.log('Adding to watchlist:', title);
+    addToListBtn.addEventListener('click', async () => {
+        const contentId = getContentIdFromPage();
+        if (!contentId) {
+            if (window.MediaX) window.MediaX.showNotification('معرّف المحتوى غير موجود', 'error');
+            return;
+        }
 
-        // Toggle button state
-        const isAdded = addToListBtn.classList.contains('added');
+        try {
+            const added = await window.MediaApi.toggleWatchlist(contentId);
+            if (added) {
+                addToListBtn.classList.add('added');
+                addToListBtn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
+                    </svg>
+                    في القائمة
+                `;
 
-        if (isAdded) {
-            addToListBtn.classList.remove('added');
-            addToListBtn.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
-                أضف للقائمة
-            `;
+                if (window.MediaX) window.MediaX.showNotification('تمت الإضافة إلى قائمة المشاهدة', 'success');
+            } else {
+                addToListBtn.classList.remove('added');
+                addToListBtn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    أضف للقائمة
+                `;
 
-            if (window.MediaX) {
-                window.MediaX.showNotification('تمت الإزالة من قائمة المشاهدة', 'info');
+                if (window.MediaX) window.MediaX.showNotification('تمت الإزالة من قائمة المشاهدة', 'info');
             }
-        } else {
-            addToListBtn.classList.add('added');
-            addToListBtn.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
-                </svg>
-                في القائمة
-            `;
-
-            if (window.MediaX) {
-                window.MediaX.showNotification('تمت الإضافة إلى قائمة المشاهدة', 'success');
-            }
+        } catch (err) {
+            console.error('Watchlist toggle error', err);
+            if (window.MediaX) window.MediaX.showNotification('حدث خطأ أثناء تحديث القائمة', 'error');
         }
     });
 }
 
-// Add to Favorites
+// Add to Favorites (uses `js/api.js` MediaApi)
 const favoriteBtn = document.querySelectorAll('.details-actions .btn-icon')[0];
 if (favoriteBtn) {
-    favoriteBtn.addEventListener('click', () => {
-        const title = document.querySelector('.details-title')?.textContent;
-        const isFavorited = favoriteBtn.classList.contains('favorited');
+    favoriteBtn.addEventListener('click', async () => {
+        const contentId = getContentIdFromPage();
+        if (!contentId) {
+            if (window.MediaX) window.MediaX.showNotification('معرّف المحتوى غير موجود', 'error');
+            return;
+        }
 
-        if (isFavorited) {
-            favoriteBtn.classList.remove('favorited');
-            favoriteBtn.querySelector('svg').style.fill = 'none';
-
-            if (window.MediaX) {
-                window.MediaX.showNotification('تمت الإزالة من المفضلة', 'info');
+        try {
+            const added = await window.MediaApi.toggleFavorite(contentId);
+            if (added) {
+                favoriteBtn.classList.add('favorited');
+                favoriteBtn.querySelector('svg').style.fill = 'currentColor';
+                if (window.MediaX) window.MediaX.showNotification('تمت الإضافة إلى المفضلة', 'success');
+            } else {
+                favoriteBtn.classList.remove('favorited');
+                favoriteBtn.querySelector('svg').style.fill = 'none';
+                if (window.MediaX) window.MediaX.showNotification('تمت الإزالة من المفضلة', 'info');
             }
-        } else {
-            favoriteBtn.classList.add('favorited');
-            favoriteBtn.querySelector('svg').style.fill = 'currentColor';
-
-            if (window.MediaX) {
-                window.MediaX.showNotification('تمت الإضافة إلى المفضلة', 'success');
-            }
+        } catch (err) {
+            console.error('Favorite toggle error', err);
+            if (window.MediaX) window.MediaX.showNotification('حدث خطأ أثناء تحديث المفضلة', 'error');
         }
     });
 }

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initializeHeader() {
     window.addEventListener('scroll', () => {
         const scrolled = window.scrollY > 50;
-        
+
         if (scrolled !== state.isScrolled) {
             state.isScrolled = scrolled;
             elements.header.classList.toggle('scrolled', scrolled);
@@ -45,11 +45,11 @@ function initializeSearch() {
     if (elements.searchBtn) {
         elements.searchBtn.addEventListener('click', openSearch);
     }
-    
+
     if (elements.searchClose) {
         elements.searchClose.addEventListener('click', closeSearch);
     }
-    
+
     if (elements.searchOverlay) {
         elements.searchOverlay.addEventListener('click', (e) => {
             if (e.target === elements.searchOverlay) {
@@ -57,7 +57,7 @@ function initializeSearch() {
             }
         });
     }
-    
+
     // Close search on ESC key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && state.isSearchOpen) {
@@ -69,7 +69,7 @@ function initializeSearch() {
 function openSearch() {
     state.isSearchOpen = true;
     elements.searchOverlay.classList.add('active');
-    
+
     // Focus on search input
     setTimeout(() => {
         const searchInput = elements.searchOverlay.querySelector('.search-input');
@@ -77,7 +77,7 @@ function openSearch() {
             searchInput.focus();
         }
     }, 300);
-    
+
     // Prevent body scroll
     document.body.style.overflow = 'hidden';
 }
@@ -85,7 +85,7 @@ function openSearch() {
 function closeSearch() {
     state.isSearchOpen = false;
     elements.searchOverlay.classList.remove('active');
-    
+
     // Restore body scroll
     document.body.style.overflow = '';
 }
@@ -96,20 +96,20 @@ function initializeSliders() {
         const prevBtn = slider.querySelector('.slider-btn-prev');
         const nextBtn = slider.querySelector('.slider-btn-next');
         const cardsContainer = slider.querySelector('.content-cards');
-        
+
         if (prevBtn && nextBtn && cardsContainer) {
             prevBtn.addEventListener('click', () => scrollSlider(cardsContainer, 'right'));
             nextBtn.addEventListener('click', () => scrollSlider(cardsContainer, 'left'));
-            
+
             // Touch/Swipe support
             let startX = 0;
             let scrollLeft = 0;
-            
+
             cardsContainer.addEventListener('touchstart', (e) => {
                 startX = e.touches[0].pageX - cardsContainer.offsetLeft;
                 scrollLeft = cardsContainer.scrollLeft;
             });
-            
+
             cardsContainer.addEventListener('touchmove', (e) => {
                 const x = e.touches[0].pageX - cardsContainer.offsetLeft;
                 const walk = (x - startX) * 2;
@@ -121,10 +121,10 @@ function initializeSliders() {
 
 function scrollSlider(container, direction) {
     const scrollAmount = container.offsetWidth * 0.8;
-    const targetScroll = direction === 'left' 
-        ? container.scrollLeft + scrollAmount 
+    const targetScroll = direction === 'left'
+        ? container.scrollLeft + scrollAmount
         : container.scrollLeft - scrollAmount;
-    
+
     container.scrollTo({
         left: targetScroll,
         behavior: 'smooth'
@@ -149,7 +149,7 @@ function toggleMobileMenu() {
 // Card Interactions
 function initializeCards() {
     const cards = document.querySelectorAll('.content-card');
-    
+
     cards.forEach(card => {
         // Play button click
         const playBtn = card.querySelector('.play-btn');
@@ -159,7 +159,7 @@ function initializeCards() {
                 handlePlayClick(card);
             });
         }
-        
+
         // Add to list button
         const addBtn = card.querySelector('.action-btn:first-child');
         if (addBtn) {
@@ -168,7 +168,7 @@ function initializeCards() {
                 handleAddToList(card);
             });
         }
-        
+
         // Favorite button
         const favoriteBtn = card.querySelector('.action-btn:last-child');
         if (favoriteBtn) {
@@ -177,7 +177,7 @@ function initializeCards() {
                 handleFavorite(card);
             });
         }
-        
+
         // Card click - go to details
         card.addEventListener('click', () => {
             handleCardClick(card);
@@ -197,7 +197,7 @@ function handleAddToList(card) {
     console.log('Adding to list:', title);
     // TODO: Add to user's watchlist
     showNotification('تمت الإضافة إلى قائمة المشاهدة', 'success');
-    
+
     // Visual feedback
     const btn = card.querySelector('.action-btn:first-child');
     btn.style.background = 'var(--primary-color)';
@@ -210,7 +210,7 @@ function handleFavorite(card) {
     const title = card.querySelector('.card-title').textContent;
     const btn = card.querySelector('.action-btn:last-child');
     const isFavorited = btn.classList.contains('favorited');
-    
+
     if (isFavorited) {
         btn.classList.remove('favorited');
         console.log('Removed from favorites:', title);
@@ -219,7 +219,7 @@ function handleFavorite(card) {
         btn.classList.add('favorited');
         console.log('Added to favorites:', title);
         showNotification('تمت الإضافة إلى المفضلة', 'success');
-        
+
         // Visual feedback
         btn.style.background = 'var(--primary-color)';
         btn.querySelector('svg').style.fill = 'currentColor';
@@ -239,7 +239,7 @@ function initializeScrollAnimations() {
         threshold: 0.1,
         rootMargin: '0px 0px -100px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -248,7 +248,7 @@ function initializeScrollAnimations() {
             }
         });
     }, observerOptions);
-    
+
     // Observe content rows
     const rows = document.querySelectorAll('.content-row, .categories-section');
     rows.forEach((row, index) => {
@@ -266,12 +266,12 @@ function showNotification(message, type = 'info') {
     if (existing) {
         existing.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
+
     // Add styles
     Object.assign(notification.style, {
         position: 'fixed',
@@ -279,9 +279,9 @@ function showNotification(message, type = 'info') {
         left: '50%',
         transform: 'translateX(-50%)',
         padding: '1rem 2rem',
-        background: type === 'success' ? 'var(--primary-color)' : 
-                   type === 'error' ? '#dc2626' : 
-                   'var(--secondary-color)',
+        background: type === 'success' ? 'var(--primary-color)' :
+            type === 'error' ? '#dc2626' :
+                'var(--secondary-color)',
         color: 'white',
         borderRadius: 'var(--radius-lg)',
         boxShadow: 'var(--shadow-xl)',
@@ -290,10 +290,10 @@ function showNotification(message, type = 'info') {
         animation: 'slideDown 0.3s ease-out',
         fontFamily: 'var(--font-primary)'
     });
-    
+
     // Add to DOM
     document.body.appendChild(notification);
-    
+
     // Remove after 3 seconds
     setTimeout(() => {
         notification.style.animation = 'slideUp 0.3s ease-out';
@@ -345,7 +345,7 @@ function debounce(func, wait) {
 
 function throttle(func, limit) {
     let inThrottle;
-    return function(...args) {
+    return function (...args) {
         if (!inThrottle) {
             func.apply(this, args);
             inThrottle = true;
@@ -357,7 +357,7 @@ function throttle(func, limit) {
 // Lazy Loading Images
 function initializeLazyLoading() {
     const images = document.querySelectorAll('img[data-src]');
-    
+
     const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -368,7 +368,7 @@ function initializeLazyLoading() {
             }
         });
     });
-    
+
     images.forEach(img => imageObserver.observe(img));
 }
 
@@ -388,3 +388,90 @@ window.MediaX = {
 };
 
 console.log('MediaX initialized successfully! 🎬');
+
+// --- Seed demo content from `data/sample_contents.json` if present ---
+(function seedDemoContent() {
+    async function fetchSample() {
+        try {
+            const res = await fetch('data/sample_contents.json');
+            if (!res.ok) return null;
+            return await res.json();
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function makeCard(item) {
+        const card = document.createElement('div');
+        card.className = 'content-card';
+        card.dataset.id = item.id;
+        card.dataset.genre = item.genre || '';
+        card.dataset.year = item.year || '';
+        card.dataset.quality = item.quality || '';
+
+        const imgUrl = `https://picsum.photos/seed/${encodeURIComponent(item.imageSeed || item.id)}/300/450`;
+
+        card.innerHTML = `
+            <div class="card-image">
+                <img data-src="${imgUrl}" alt="${item.title}">
+                <div class="card-overlay">
+                    <button class="play-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="card-actions">
+                        <button class="action-btn" title="أضف للقائمة">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </button>
+                        <button class="action-btn" title="المفضلة">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <span class="card-badge">${item.quality || ''}</span>
+            </div>
+            <div class="card-info">
+                <h4 class="card-title">${item.title}</h4>
+                <div class="card-meta">
+                    <span class="rating">${item.rating}</span>
+                    <span class="year">${item.year}</span>
+                </div>
+            </div>
+        `;
+
+        return card;
+    }
+
+    async function seed() {
+        const sample = await fetchSample();
+        if (!sample || !sample.length) return;
+
+        const containers = document.querySelectorAll('.content-cards');
+        containers.forEach(container => {
+            // If container already has many items, skip
+            if (container.querySelectorAll('.content-card').length >= 8) return;
+
+            // Add up to 12 demo cards
+            for (let i = 0; i < Math.min(12, sample.length); i++) {
+                const item = sample[i % sample.length];
+                const card = makeCard(item);
+                container.appendChild(card);
+            }
+        });
+
+        // After adding cards, initialize lazy loading and card behaviors
+        initializeLazyLoading();
+        initializeCards();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', seed);
+    } else {
+        seed();
+    }
+})();

@@ -1,5 +1,5 @@
 // Movies Page JavaScript
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get filter elements
     const genreFilter = document.getElementById('genreFilter');
     const yearFilter = document.getElementById('yearFilter');
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update visible cards
     function updateVisibleCards() {
         const visibleMovies = allCards.filter(card => card.style.display !== 'none');
-        
+
         visibleMovies.forEach((card, index) => {
             if (index < visibleCards) {
                 card.classList.remove('hidden');
@@ -109,10 +109,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load more movies
     if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function() {
+        loadMoreBtn.addEventListener('click', function () {
             visibleCards += 8;
             updateVisibleCards();
-            
+
             // Scroll to first newly visible card
             const firstNewCard = allCards[visibleCards - 8];
             if (firstNewCard) {
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add to watchlist functionality (uses `js/api.js` MediaApi)
     document.querySelectorAll('.action-btn').forEach(btn => {
-        btn.addEventListener('click', async function(e) {
+        btn.addEventListener('click', async function (e) {
             e.stopPropagation();
 
             const card = this.closest('.content-card');
@@ -191,9 +191,9 @@ document.addEventListener('DOMContentLoaded', function() {
             z-index: 10000;
             animation: slideInRight 0.3s ease-out;
         `;
-        
+
         document.body.appendChild(notification);
-        
+
         // Remove after 3 seconds
         setTimeout(() => {
             notification.style.animation = 'slideOutRight 0.3s ease-out';

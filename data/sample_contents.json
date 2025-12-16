@@ -1,0 +1,110 @@
+[
+    {
+        "id": "c1",
+        "title": "ليالي المدينة",
+        "year": "2024",
+        "rating": "4.8",
+        "genre": "دراما",
+        "quality": "4K",
+        "imageSeed": "city-nights"
+    },
+    {
+        "id": "c2",
+        "title": "رحلة الأمل",
+        "year": "2024",
+        "rating": "4.7",
+        "genre": "عائلي",
+        "quality": "HD",
+        "imageSeed": "family-journey"
+    },
+    {
+        "id": "c3",
+        "title": "صوت الصحراء",
+        "year": "2023",
+        "rating": "4.6",
+        "genre": "وثائقي",
+        "quality": "HD",
+        "imageSeed": "desert-voice"
+    },
+    {
+        "id": "c4",
+        "title": "الحكاية القديمة",
+        "year": "2022",
+        "rating": "4.5",
+        "genre": "تاريخي",
+        "quality": "HD",
+        "imageSeed": "old-tale"
+    },
+    {
+        "id": "c5",
+        "title": "مغامرات صغيرة",
+        "year": "2021",
+        "rating": "4.4",
+        "genre": "عائلي",
+        "quality": "HD",
+        "imageSeed": "kids-adventure"
+    },
+    {
+        "id": "c6",
+        "title": "ألغاز المدينة",
+        "year": "2024",
+        "rating": "4.9",
+        "genre": "إثارة",
+        "quality": "4K",
+        "imageSeed": "mystery-city"
+    },
+    {
+        "id": "c7",
+        "title": "كتاب العقل",
+        "year": "2020",
+        "rating": "4.2",
+        "genre": "تعليمي",
+        "quality": "PDF",
+        "imageSeed": "book-mind"
+    },
+    {
+        "id": "c8",
+        "title": "سباق الزمن",
+        "year": "2023",
+        "rating": "4.3",
+        "genre": "أكشن",
+        "quality": "4K",
+        "imageSeed": "time-race"
+    },
+    {
+        "id": "c9",
+        "title": "أبطال الحي",
+        "year": "2022",
+        "rating": "4.1",
+        "genre": "كوميديا",
+        "quality": "HD",
+        "imageSeed": "neighborhood-heroes"
+    },
+    {
+        "id": "c10",
+        "title": "غموض القصر",
+        "year": "2024",
+        "rating": "4.85",
+        "genre": "رعب",
+        "quality": "4K",
+        "imageSeed": "mansion-mystery"
+    },
+    {
+        "id": "c11",
+        "title": "رحلة الصياد",
+        "year": "2019",
+        "rating": "4.0",
+        "genre": "مغامرة",
+        "quality": "HD",
+        "imageSeed": "fisher-journey"
+    },
+    {
+        "id": "c12",
+        "title": "ليلة في الريف",
+        "year": "2021",
+        "rating": "4.25",
+        "genre": "رومانسية",
+        "quality": "HD",
+        "imageSeed": "country-night"
+    }
+]
