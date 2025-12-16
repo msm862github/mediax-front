@@ -398,6 +398,129 @@ a:hover {
     border-radius: var(--radius-xl);
     color: var(--text-primary);
     font-family: var(--font-primary);
+
+    /* --- Added UI polish --- */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.6rem 1rem;
+        border-radius: var(--radius-md);
+        border: none;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text-primary);
+        transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .btn-secondary {
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text-primary);
+    }
+
+    .btn-icon {
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    /* Content card polish */
+    .content-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .content-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .card-image {
+        position: relative;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+    }
+
+    .card-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0.6rem;
+        pointer-events: none;
+    }
+
+    .card-overlay .play-btn,
+    .card-overlay .card-actions {
+        pointer-events: auto;
+    }
+
+    .card-badge {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 0.25rem 0.5rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+    }
+
+    /* Card info */
+    .card-info {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .card-meta {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 900px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .nav-list {
+            gap: 0.5rem;
+        }
+
+        .container {
+            padding: 0 1rem;
+        }
+
+        .hero-title {
+            font-size: 1.5rem;
+        }
+    }
+
     transition: all var(--transition-normal);
 }
 
