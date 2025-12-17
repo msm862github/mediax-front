@@ -74,6 +74,23 @@ function initializeHeader() {
             elements.header.classList.toggle('scrolled', scrolled);
         }
     });
+
+    // Mobile / touch: toggle user menu dropdown on avatar click
+    const avatarBtn = document.querySelector('.user-avatar');
+    if (avatarBtn) {
+        avatarBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const menu = avatarBtn.closest('.user-menu')?.querySelector('.dropdown-menu');
+            if (menu && menu.classList) menu.classList.toggle('open');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.user-menu')) {
+                document.querySelectorAll('.dropdown-menu.open').forEach(m => m.classList.remove('open'));
+            }
+        });
+    }
 }
 
 // Search Functionality

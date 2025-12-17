@@ -1488,3 +1488,136 @@ a:hover {
 .p-4 {
     padding: var(--spacing-xl);
 }
+
+/* Improve header layout and spacing on mobile to be consistent */
+@media (max-width: 992px) {
+    .header {
+        height: 70px;
+        padding: 0 0;
+    }
+
+    .header-content {
+        padding: 0.5rem 0.75rem;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    .logo h1 {
+        font-size: 1.35rem;
+        line-height: 1;
+    }
+
+    .header-actions {
+        gap: 0.5rem;
+    }
+
+    /* Reduce icon sizes to avoid wrapping */
+    .header-actions .search-btn,
+    .header-actions .notifications-btn,
+    .header-actions .user-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Ensure hero and page header have correct top offset for fixed header */
+    .hero,
+    .page-header {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 64px;
+    }
+
+    .header-content {
+        padding: 0.35rem 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+
+    /* Hide less-important header actions on very small screens to avoid overflow */
+    .header-actions .notifications-btn {
+        display: none;
+    }
+
+    /* Keep user avatar visible on mobile; hide only dropdown until toggled */
+    .header-actions .user-menu {
+        display: block;
+    }
+
+    .header-actions .user-menu .dropdown-menu {
+        /* ensure dropdown stays hidden until explicitly opened */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+    }
+
+    .header-actions .user-menu .dropdown-menu.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .hero,
+    .page-header {
+        margin-top: 64px;
+    }
+}
+
+/* Collapse two-column side/profile layouts into single column on small screens */
+@media (max-width: 768px) {
+    body .main-content .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    /* Target main content immediate grid used by profile/settings pages */
+    .main-content .container>div[style*="grid-template-columns"],
+    .main-content .container>div:first-child {
+        display: block !important;
+        grid-template-columns: none !important;
+        gap: 0 !important;
+    }
+
+    .main-content .container>div>div {
+        width: 100% !important;
+        margin-bottom: var(--spacing-lg);
+        box-sizing: border-box;
+    }
+
+    /* Profile avatar sizing */
+    .main-content img[data-src][alt="الصورة الشخصية"],
+    .main-content img[alt="الصورة الشخصية"] {
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    /* Settings sidebar: make nav horizontal tabs */
+    .main-content nav {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+        overflow-x: auto !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    .main-content nav a {
+        white-space: nowrap;
+        flex: 0 0 auto;
+        display: inline-block !important;
+        padding: 0.65rem 0.9rem !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border-radius: var(--radius-md) !important;
+    }
+
+    /* Ensure form buttons stack nicely */
+    .main-content form>div:last-child {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+    }
+}

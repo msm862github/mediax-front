@@ -85,10 +85,19 @@
     margin: 0;
 }
 
-/* Card */
+overflow: auto;
+-webkit-overflow-scrolling: touch;
+
 .auth-card {
     background: rgba(31, 31, 31, 0.8);
     backdrop-filter: blur(20px);
+
+    /* On small screens, stack content from top and allow scroll */
+    .auth-page {
+        align-items: flex-start;
+        padding-top: var(--spacing-2xl);
+    }
+
     border-radius: var(--radius-xl);
     padding: var(--spacing-2xl);
     box-shadow: var(--shadow-xl);
