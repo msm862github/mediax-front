@@ -1253,6 +1253,76 @@ a:hover {
     }
 }
 
+/* Mobile navigation panel and button animation */
+@media (max-width: 992px) {
+    .main-nav.active {
+        display: block;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        width: 280px;
+        background: var(--bg-secondary);
+        padding: 1rem;
+        z-index: calc(var(--z-modal) + 10);
+        box-shadow: -20px 0 40px rgba(0, 0, 0, 0.6);
+        overflow-y: auto;
+        transform: translateX(0);
+        animation: slideInRight 240ms ease-out;
+        border-left: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .main-nav .nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch;
+        padding: 0.5rem 0;
+    }
+
+    .main-nav .nav-list .nav-link {
+        padding: 0.75rem 1rem;
+        display: block;
+        border-radius: var(--radius-md);
+        font-size: 1rem;
+        color: var(--text-primary);
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(7px) rotate(-45deg);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(45deg);
+    }
+}
+
+/* Ensure grid pages render cards as grid items (watchlist / favorites / profile) */
+.content-grid .content-card {
+    width: 100%;
+    flex: none;
+    transform: none;
+}
+
+.content-grid {
+    align-items: start;
+}
+
+/* Slightly smaller cards on very small viewports for comfortable fit */
+@media (max-width: 480px) {
+    .content-card {
+        width: 140px;
+    }
+
+    .content-cards {
+        gap: 8px;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 var(--spacing-md);

@@ -224,17 +224,31 @@ function scrollSlider(container, direction) {
 
 // Mobile Menu
 function initializeMobileMenu() {
-    if (elements.mobileMenuBtn) {
-        elements.mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    // Query the button at init time to ensure it exists (avoid early-top-level queries)
+    const btn = document.getElementById('mobileMenuBtn');
+    if (btn) {
+        btn.addEventListener('click', toggleMobileMenu);
+    }
+    // Close mobile menu when a nav link is clicked (auto-close behavior)
+    const nav = document.querySelector('.main-nav');
+    if (nav) {
+        nav.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (!link) return;
+            // Only act for internal nav links (ignore dropdown anchors that may not navigate)
+            // Close the mobile menu UI
+            nav.classList.remove('active');
+            const btnNow = document.getElementById('mobileMenuBtn') || btn || elements.mobileMenuBtn;
+            if (btnNow) btnNow.classList.remove('active');
+        });
     }
 }
 
 function toggleMobileMenu() {
     const nav = document.querySelector('.main-nav');
-    if (nav) {
-        nav.classList.toggle('active');
-        elements.mobileMenuBtn.classList.toggle('active');
-    }
+    const btn = document.getElementById('mobileMenuBtn') || elements.mobileMenuBtn;
+    if (nav) nav.classList.toggle('active');
+    if (btn) btn.classList.toggle('active');
 }
 
 // Card Interactions
