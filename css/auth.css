@@ -74,6 +74,23 @@
     font-weight: 900;
     margin-bottom: var(--spacing-sm);
     background: var(--gradient-primary);
+
+/* Ensure auth page always allows vertical scroll and children don't clip it */
+html, body {
+    height: auto !important;
+    min-height: 100% !important;
+}
+
+.auth-container,
+.auth-card,
+.auth-features {
+    overflow: visible !important;
+}
+
+/* Avoid any accidental fixed heights that block scrolling */
+.auth-container {
+    max-height: none !important;
+}
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
