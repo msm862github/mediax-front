@@ -106,5 +106,118 @@
         "genre": "رومانسية",
         "quality": "HD",
         "imageSeed": "country-night"
+    },
+    {
+        "id": "s1",
+        "title": "قلب اسطنبول",
+        "type": "series",
+        "year": "2022",
+        "rating": "4.6",
+        "genre": "تركية",
+        "imageSeed": "istanbul-heart",
+        "seasons": [
+            {
+                "season": 1,
+                "episodes": [
+                    {
+                        "id": "s1-s1e1",
+                        "title": "البداية",
+                        "duration": 48,
+                        "imageSeed": "s1-s1e1"
+                    },
+                    {
+                        "id": "s1-s1e2",
+                        "title": "اللقاء",
+                        "duration": 50,
+                        "imageSeed": "s1-s1e2"
+                    },
+                    {
+                        "id": "s1-s1e3",
+                        "title": "القرار",
+                        "duration": 47,
+                        "imageSeed": "s1-s1e3"
+                    }
+                ]
+            },
+            {
+                "season": 2,
+                "episodes": [
+                    {
+                        "id": "s1-s2e1",
+                        "title": "عودة",
+                        "duration": 52,
+                        "imageSeed": "s1-s2e1"
+                    },
+                    {
+                        "id": "s1-s2e2",
+                        "title": "خيانة",
+                        "duration": 49,
+                        "imageSeed": "s1-s2e2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "s2",
+        "title": "قصص من حارة",
+        "type": "series",
+        "year": "2023",
+        "rating": "4.4",
+        "genre": "عربية",
+        "imageSeed": "neighborhood-tales",
+        "seasons": [
+            {
+                "season": 1,
+                "episodes": [
+                    {
+                        "id": "s2-s1e1",
+                        "title": "البوابة",
+                        "duration": 40,
+                        "imageSeed": "s2-s1e1"
+                    },
+                    {
+                        "id": "s2-s1e2",
+                        "title": "اللقاء السري",
+                        "duration": 42,
+                        "imageSeed": "s2-s1e2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "s3",
+        "title": "أمواج سرية",
+        "type": "series",
+        "year": "2021",
+        "rating": "4.7",
+        "genre": "كورية",
+        "imageSeed": "secret-waves",
+        "seasons": [
+            {
+                "season": 1,
+                "episodes": [
+                    {
+                        "id": "s3-s1e1",
+                        "title": "بدء الرحلة",
+                        "duration": 60,
+                        "imageSeed": "s3-s1e1"
+                    },
+                    {
+                        "id": "s3-s1e2",
+                        "title": "الأثر",
+                        "duration": 58,
+                        "imageSeed": "s3-s1e2"
+                    },
+                    {
+                        "id": "s3-s1e3",
+                        "title": "السر",
+                        "duration": 62,
+                        "imageSeed": "s3-s1e3"
+                    }
+                ]
+            }
+        ]
     }
 ]

@@ -96,6 +96,61 @@ function initializeSearch() {
             closeSearch();
         }
     });
+
+    // Wire search input to sample data
+    const searchInput = document.querySelector('.search-input');
+    const resultsContainer = document.querySelector('.search-results');
+    let sampleCache = null;
+
+    async function loadSample() {
+        if (sampleCache) return sampleCache;
+        try {
+            const res = await fetch('data/sample_contents.json');
+            if (!res.ok) return [];
+            sampleCache = await res.json();
+            return sampleCache;
+        } catch (e) {
+            return [];
+        }
+    }
+
+    const doSearch = debounce(async (term) => {
+        if (!resultsContainer) return;
+        const q = (term || '').trim().toLowerCase();
+        if (!q) {
+            resultsContainer.innerHTML = '<p class="search-empty">اكتب للبحث...</p>';
+            return;
+        }
+
+        const sample = await loadSample();
+        const matches = sample.filter(item => {
+            return (item.title || '').toLowerCase().includes(q) || (item.genre || '').toLowerCase().includes(q) || (item.type || '').toLowerCase().includes(q);
+        }).slice(0, 20);
+
+        if (!matches.length) {
+            resultsContainer.innerHTML = '<p class="search-empty">لا توجد نتائج</p>';
+            return;
+        }
+
+        resultsContainer.innerHTML = '';
+        matches.forEach(m => {
+            const row = document.createElement('a');
+            row.className = 'search-result-item';
+            row.href = `details.html?id=${encodeURIComponent(m.id)}`;
+            row.innerHTML = `
+                <img data-src="https://picsum.photos/seed/${encodeURIComponent(m.imageSeed || m.id)}/80/120" alt="${m.title}">
+                <div class="search-result-info"><strong>${m.title}</strong><span>${m.genre || ''} • ${m.year || ''}</span></div>
+            `;
+            resultsContainer.appendChild(row);
+        });
+
+        // ensure lazy load on results
+        initializeLazyLoading();
+    }, 250);
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => doSearch(e.target.value));
+    }
 }
 
 function openSearch() {

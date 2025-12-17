@@ -148,318 +148,428 @@
             </div>
         </div>
     </section>
-
-    <!-- Series Grid -->
+    <!-- Categorized Rows -->
     <main class="main-content">
         <div class="container">
-            <div class="content-grid" id="seriesGrid">
-                <!-- Series Card 1 -->
-                <div class="content-card" data-genre="drama" data-year="2024" data-status="ongoing">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/series1/300/450" alt="مسلسل">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
+
+            <!-- مسلسلات تركية -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">مسلسلات تركية</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="details.html?id=s1">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/istanbul-heart/300/450" alt="قلب اسطنبول">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">قلب اسطنبول</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=series1">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/series1/300/450" alt="دراما تركية">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">ليالي اسطنبول</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=series2">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/series2/300/450" alt="رومانسي تركي">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">قصة من آسيا</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- مسلسلات عربية -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">مسلسلات عربية</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="details.html?id=s2">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/neighborhood-tales/300/450" alt="قصص من حارة">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">قصص من حارة</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=c2">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/family-journey/300/450" alt="رحلة الأمل">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">رحلة الأمل</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=series3">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/series3/300/450" alt="مسلسل عربي">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">عائلة وأحداث</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- مسلسلات كورية -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">مسلسلات كورية</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="details.html?id=s3">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/secret-waves/300/450" alt="أمواج سرية">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">أمواج سرية</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=series4">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/series4/300/450" alt="دراما كورية">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">ليلة وذكرى</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Series Grid -->
+            <div class="container">
+                <div class="content-grid" id="seriesGrid">
+                    <!-- Series Card 1 -->
+                    <div class="content-card" data-genre="drama" data-year="2024" data-status="ongoing">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/series1/300/450" alt="مسلسل">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                 </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge new">جاري العرض</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">رحلة الأمل</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
                                     </svg>
-                                </button>
+                                    4.8
+                                </span>
+                                <span>2024</span>
+                                <span>30 حلقة</span>
                             </div>
                         </div>
-                        <span class="card-badge new">جاري العرض</span>
                     </div>
-                    <div class="card-info">
-                        <h4 class="card-title">رحلة الأمل</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.8
-                            </span>
-                            <span>2024</span>
-                            <span>30 حلقة</span>
+
+                    <!-- Series Card 2 -->
+                    <div class="content-card" data-genre="comedy" data-year="2024" data-status="ongoing">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/series2/300/450" alt="مسلسل">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">HD</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">عائلة سعيدة</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    4.9
+                                </span>
+                                <span>2024</span>
+                                <span>20 حلقة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Series Card 3 -->
+                    <div class="content-card" data-genre="action" data-year="2023" data-status="completed">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/series3/300/450" alt="مسلسل">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">4K</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">المهمة الخطيرة</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    4.7
+                                </span>
+                                <span>2023</span>
+                                <span>25 حلقة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Series Card 4 -->
+                    <div class="content-card" data-genre="historical" data-year="2023" data-status="completed">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/series4/300/450" alt="مسلسل">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">HD</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">ملوك الطوائف</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    5.0
+                                </span>
+                                <span>2023</span>
+                                <span>40 حلقة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Series Card 5 -->
+                    <div class="content-card" data-genre="romance" data-year="2024" data-status="ongoing">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/series5/300/450" alt="مسلسل">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge new">جاري العرض</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">قصة حب خالدة</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    4.6
+                                </span>
+                                <span>2024</span>
+                                <span>15 حلقة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Series Card 6 -->
+                    <div class="content-card" data-genre="thriller" data-year="2024" data-status="upcoming">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/series6/300/450" alt="مسلسل">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">قريباً</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">الغموض الأعظم</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    -
+                                </span>
+                                <span>2024</span>
+                                <span>قريباً</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Series Card 2 -->
-                <div class="content-card" data-genre="comedy" data-year="2024" data-status="ongoing">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/series2/300/450" alt="مسلسل">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge">HD</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">عائلة سعيدة</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.9
-                            </span>
-                            <span>2024</span>
-                            <span>20 حلقة</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Series Card 3 -->
-                <div class="content-card" data-genre="action" data-year="2023" data-status="completed">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/series3/300/450" alt="مسلسل">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge">4K</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">المهمة الخطيرة</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.7
-                            </span>
-                            <span>2023</span>
-                            <span>25 حلقة</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Series Card 4 -->
-                <div class="content-card" data-genre="historical" data-year="2023" data-status="completed">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/series4/300/450" alt="مسلسل">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge">HD</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">ملوك الطوائف</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                5.0
-                            </span>
-                            <span>2023</span>
-                            <span>40 حلقة</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Series Card 5 -->
-                <div class="content-card" data-genre="romance" data-year="2024" data-status="ongoing">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/series5/300/450" alt="مسلسل">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge new">جاري العرض</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">قصة حب خالدة</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.6
-                            </span>
-                            <span>2024</span>
-                            <span>15 حلقة</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Series Card 6 -->
-                <div class="content-card" data-genre="thriller" data-year="2024" data-status="upcoming">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/series6/300/450" alt="مسلسل">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge">قريباً</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">الغموض الأعظم</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                -
-                            </span>
-                            <span>2024</span>
-                            <span>قريباً</span>
-                        </div>
-                    </div>
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="btn btn-secondary" id="loadMoreBtn">
+                        تحميل المزيد
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-
-            <!-- Load More Button -->
-            <div class="load-more-container">
-                <button class="btn btn-secondary" id="loadMoreBtn">
-                    تحميل المزيد
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-                    </svg>
-                </button>
-            </div>
-        </div>
     </main>
 
     <!-- Footer -->

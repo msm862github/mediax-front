@@ -101,148 +101,223 @@
         </div>
     </section>
 
+    <!-- Categorized Rows -->
     <main class="main-content">
         <div class="container">
-            <div class="content-grid" id="gamesGrid">
-                <div class="content-card" data-genre="puzzle" data-platform="web">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/game1/300/300" alt="لعبة">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
-                                </svg>
-                            </button>
-                        </div>
-                        <span class="card-badge">مجاني</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">لعبة الألغاز العربية</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.8</span>
-                            <span>ألغاز</span>
-                        </div>
+
+            <!-- ألعاب ألغاز -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">ألغاز</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="#">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/game1/300/300" alt="لعبة ألغاز">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">لعبة الألغاز العربية</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="#">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/game2/300/300" alt="لعبة ألغاز">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">ألغاز المدينة</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </section>
 
-                <div class="content-card" data-genre="adventure" data-platform="mobile">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/game2/300/300" alt="لعبة">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
-                                </svg>
-                            </button>
-                        </div>
-                        <span class="card-badge new">جديد</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">مغامرات سندباد</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.9</span>
-                            <span>مغامرات</span>
-                        </div>
+            <!-- ألعاب مغامرات -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">مغامرات</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="#">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/game3/300/300" alt="مغامرات سندباد">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">مغامرات سندباد</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </section>
 
-                <div class="content-card" data-genre="strategy" data-platform="pc">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/game3/300/300" alt="لعبة">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
-                                </svg>
-                            </button>
-                        </div>
-                        <span class="card-badge">مدفوع</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">حروب الممالك</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 5.0</span>
-                            <span>استراتيجية</span>
-                        </div>
+            <!-- ألعاب سباقات -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">سباقات</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="#">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/game4/300/300" alt="سباق الصحراء">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">سباق الصحراء</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </section>
 
-                <div class="content-card" data-genre="racing" data-platform="mobile">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/game4/300/300" alt="لعبة">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
-                                </svg>
-                            </button>
+            <div class="container">
+                <div class="content-grid" id="gamesGrid">
+                    <div class="content-card" data-genre="puzzle" data-platform="web">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/game1/300/300" alt="لعبة">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge">مجاني</span>
                         </div>
-                        <span class="card-badge">مجاني</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">سباق الصحراء</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.7</span>
-                            <span>سباقات</span>
+                        <div class="card-info">
+                            <h4 class="card-title">لعبة الألغاز العربية</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.8</span>
+                                <span>ألغاز</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="content-card" data-genre="sports" data-platform="web">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/game5/300/300" alt="لعبة">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
-                                </svg>
-                            </button>
+                    <div class="content-card" data-genre="adventure" data-platform="mobile">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/game2/300/300" alt="لعبة">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge new">جديد</span>
                         </div>
-                        <span class="card-badge">مجاني</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">كرة القدم العربية</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.6</span>
-                            <span>رياضة</span>
+                        <div class="card-info">
+                            <h4 class="card-title">مغامرات سندباد</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.9</span>
+                                <span>مغامرات</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="content-card" data-genre="educational" data-platform="web">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/game6/300/300" alt="لعبة">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
-                                </svg>
-                            </button>
+                    <div class="content-card" data-genre="strategy" data-platform="pc">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/game3/300/300" alt="لعبة">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge">مدفوع</span>
                         </div>
-                        <span class="card-badge">مجاني</span>
+                        <div class="card-info">
+                            <h4 class="card-title">حروب الممالك</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 5.0</span>
+                                <span>استراتيجية</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h4 class="card-title">تعلم العربية</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.9</span>
-                            <span>تعليمية</span>
+
+                    <div class="content-card" data-genre="racing" data-platform="mobile">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/game4/300/300" alt="لعبة">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge">مجاني</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">سباق الصحراء</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.7</span>
+                                <span>سباقات</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-genre="sports" data-platform="web">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/game5/300/300" alt="لعبة">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge">مجاني</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">كرة القدم العربية</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.6</span>
+                                <span>رياضة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-genre="educational" data-platform="web">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/game6/300/300" alt="لعبة">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="alert('جاري تحميل اللعبة...')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge">مجاني</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">تعلم العربية</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.9</span>
+                                <span>تعليمية</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer class="footer">

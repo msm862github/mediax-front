@@ -64,21 +64,42 @@ async function loadContentFromQuery() {
         initializeCards();
     }
 
-    // Episodes (if series)
+    // Episodes / Seasons (if series)
     const episodesGrid = document.querySelector('.episodes-grid');
+    const seasonContainer = document.querySelector('.season-selector');
     if (episodesGrid) {
         episodesGrid.innerHTML = '';
-        const epCount = item.episodes || 8;
-        for (let i = 1; i <= epCount; i++) {
-            const ep = document.createElement('div');
-            ep.className = 'episode-card';
-            ep.innerHTML = `
-                <div class="episode-thumb"><img data-src="https://picsum.photos/seed/${encodeURIComponent(item.id + '-ep' + i)}/400/225" alt="حلقة ${i}"></div>
-                <div class="episode-info"><h5 class="episode-title">${item.title} - حلقة ${i}</h5><p class="episode-meta">${fmtMinutes(25 + i)} • ${new Date().getFullYear()}</p></div>
-                <div class="episode-actions"><button class="play-btn-small">تشغيل</button></div>
-            `;
-            episodesGrid.appendChild(ep);
+
+        if (item.seasons && Array.isArray(item.seasons) && item.seasons.length) {
+            // render season buttons
+            if (seasonContainer) {
+                seasonContainer.innerHTML = '';
+                item.seasons.forEach(s => {
+                    const btn = document.createElement('button');
+                    btn.className = 'season-btn';
+                    btn.dataset.season = s.season;
+                    btn.textContent = `الموسم ${s.season}`;
+                    seasonContainer.appendChild(btn);
+                });
+                // make first season active and load
+                const first = seasonContainer.querySelector('.season-btn');
+                if (first) {
+                    first.classList.add('active');
+                    loadSeasonEpisodes(first.dataset.season, item);
+                }
+            } else {
+                // fallback: just list episodes of first season
+                const s = item.seasons[0];
+                renderEpisodesList(s.episodes, item.title);
+            }
+        } else {
+            // legacy: numeric episodes count
+            const epCount = item.episodes || 8;
+            const eps = [];
+            for (let i = 1; i <= epCount; i++) eps.push({ id: item.id + '-ep' + i, title: `${item.title} - حلقة ${i}`, duration: 25 + i, imageSeed: item.id + '-ep' + i });
+            renderEpisodesList(eps, item.title);
         }
+
         initializeLazyLoading();
         initializeEpisodeCards();
     }
@@ -128,10 +149,23 @@ async function loadSeasonEpisodes(season) {
 
     try {
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 500));
+        await new Promise(resolve => setTimeout(resolve, 300));
 
-        // In real app, fetch episodes from API
-        // const episodes = await fetchEpisodes(season);
+        // Find current item on the page to get seasons data
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        let sample = [];
+        try { const res = await fetch('data/sample_contents.json'); sample = await res.json(); } catch (e) { }
+        const item = sample.find(s => s.id === id);
+        if (!item || !item.seasons) {
+            episodesGrid.style.opacity = '1';
+            return;
+        }
+
+        const seasonObj = item.seasons.find(s => String(s.season) === String(season));
+        if (seasonObj) {
+            renderEpisodesList(seasonObj.episodes, item.title);
+        }
 
         // Restore opacity
         episodesGrid.style.opacity = '1';
@@ -143,6 +177,22 @@ async function loadSeasonEpisodes(season) {
         console.error('Error loading episodes:', error);
         episodesGrid.style.opacity = '1';
     }
+}
+
+function renderEpisodesList(episodes, seriesTitle) {
+    const episodesGrid = document.querySelector('.episodes-grid');
+    if (!episodesGrid) return;
+    episodesGrid.innerHTML = '';
+    episodes.forEach(ep => {
+        const epCard = document.createElement('div');
+        epCard.className = 'episode-card';
+        epCard.innerHTML = `
+            <div class="episode-thumb"><img data-src="https://picsum.photos/seed/${encodeURIComponent(ep.imageSeed || ep.id)}/400/225" alt="${ep.title}"></div>
+            <div class="episode-info"><h5 class="episode-title">${ep.title}</h5><p class="episode-meta">${fmtMinutes(ep.duration || 45)} • ${new Date().getFullYear()}</p></div>
+            <div class="episode-actions"><button class="play-btn-small">تشغيل</button></div>
+        `;
+        episodesGrid.appendChild(epCard);
+    });
 }
 
 // Episode Cards

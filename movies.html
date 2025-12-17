@@ -153,415 +153,517 @@
         </div>
     </section>
 
-    <!-- Movies Grid -->
+    <!-- Categorized Rows -->
     <main class="main-content">
         <div class="container">
-            <div class="content-grid" id="moviesGrid">
-                <!-- Movie Card 1 -->
-                <div class="content-card" data-genre="action" data-year="2024" data-quality="4k">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/movie1/300/450" alt="فيلم">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
+
+            <!-- أفلام أكشن -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">أفلام أكشن</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="details.html?id=c8">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/time-race/300/450" alt="سباق الزمن">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">سباق الزمن</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=movie-action-2">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/action2/300/450" alt="فيلم أكشن">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">المهمة الحاسمة</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=movie-action-3">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/action3/300/450" alt="فيلم أكشن">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">سباق الموت</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- أفلام رومانسية -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">أفلام رومانسية</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="details.html?id=c12">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/country-night/300/450" alt="ليلة في الريف">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">ليلة في الريف</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=movie-romance-2">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/romance2/300/450" alt="فيلم رومانسي">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">حب وغرام</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- أفلام وثائقية -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">وثائقيات</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="details.html?id=c3">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/desert-voice/300/450" alt="صوت الصحراء">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">صوت الصحراء</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=doc2">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/doc2/300/450" alt="وثائقي">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">عجائب الطبيعة</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Movies Grid -->
+            <div class="container">
+                <div class="content-grid" id="moviesGrid">
+                    <!-- Movie Card 1 -->
+                    <div class="content-card" data-genre="action" data-year="2024" data-quality="4k">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/movie1/300/450" alt="فيلم">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                 </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">4K</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">المهمة المستحيلة</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
                                     </svg>
-                                </button>
+                                    4.8
+                                </span>
+                                <span>2024</span>
+                                <span>أكشن</span>
                             </div>
                         </div>
-                        <span class="card-badge">4K</span>
                     </div>
-                    <div class="card-info">
-                        <h4 class="card-title">المهمة المستحيلة</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.8
-                            </span>
-                            <span>2024</span>
-                            <span>أكشن</span>
+
+                    <!-- Movie Card 2 -->
+                    <div class="content-card" data-genre="drama" data-year="2024" data-quality="hd">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/movie2/300/450" alt="فيلم">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">HD</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">قصة حب</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    4.6
+                                </span>
+                                <span>2024</span>
+                                <span>دراما</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 3 -->
+                    <div class="content-card" data-genre="comedy" data-year="2023" data-quality="hd">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/movie6/300/450" alt="فيلم">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge new">جديد</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">ضحك ولعب</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    4.9
+                                </span>
+                                <span>2023</span>
+                                <span>كوميديا</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 4 -->
+                    <div class="content-card" data-genre="thriller" data-year="2024" data-quality="4k">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/movie7/300/450" alt="فيلم">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">4K</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">الغموض الأسود</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    4.7
+                                </span>
+                                <span>2024</span>
+                                <span>إثارة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 5 -->
+                    <div class="content-card" data-genre="romance" data-year="2023" data-quality="hd">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/movie8/300/450" alt="فيلم">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">HD</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">حب في زمن الحرب</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    4.5
+                                </span>
+                                <span>2023</span>
+                                <span>رومانسي</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 6 -->
+                    <div class="content-card" data-genre="scifi" data-year="2024" data-quality="4k">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/movie9/300/450" alt="فيلم">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">4K</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">رحلة إلى المستقبل</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    5.0
+                                </span>
+                                <span>2024</span>
+                                <span>خيال علمي</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 7 -->
+                    <div class="content-card" data-genre="animation" data-year="2024" data-quality="4k">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/movie10/300/450" alt="فيلم">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge new">جديد</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">مغامرات سندباد</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    4.8
+                                </span>
+                                <span>2024</span>
+                                <span>رسوم متحركة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 8 -->
+                    <div class="content-card" data-genre="horror" data-year="2023" data-quality="hd">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/movie11/300/450" alt="فيلم">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="card-actions">
+                                    <button class="action-btn" title="أضف للقائمة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                    </button>
+                                    <button class="action-btn" title="أضف للمفضلة">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card-badge">HD</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">البيت المسكون</h4>
+                            <div class="card-meta">
+                                <span class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    4.3
+                                </span>
+                                <span>2023</span>
+                                <span>رعب</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Movie Card 2 -->
-                <div class="content-card" data-genre="drama" data-year="2024" data-quality="hd">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/movie2/300/450" alt="فيلم">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge">HD</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">قصة حب</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.6
-                            </span>
-                            <span>2024</span>
-                            <span>دراما</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Movie Card 3 -->
-                <div class="content-card" data-genre="comedy" data-year="2023" data-quality="hd">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/movie6/300/450" alt="فيلم">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge new">جديد</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">ضحك ولعب</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.9
-                            </span>
-                            <span>2023</span>
-                            <span>كوميديا</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Movie Card 4 -->
-                <div class="content-card" data-genre="thriller" data-year="2024" data-quality="4k">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/movie7/300/450" alt="فيلم">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge">4K</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">الغموض الأسود</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.7
-                            </span>
-                            <span>2024</span>
-                            <span>إثارة</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Movie Card 5 -->
-                <div class="content-card" data-genre="romance" data-year="2023" data-quality="hd">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/movie8/300/450" alt="فيلم">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge">HD</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">حب في زمن الحرب</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.5
-                            </span>
-                            <span>2023</span>
-                            <span>رومانسي</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Movie Card 6 -->
-                <div class="content-card" data-genre="scifi" data-year="2024" data-quality="4k">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/movie9/300/450" alt="فيلم">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge">4K</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">رحلة إلى المستقبل</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                5.0
-                            </span>
-                            <span>2024</span>
-                            <span>خيال علمي</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Movie Card 7 -->
-                <div class="content-card" data-genre="animation" data-year="2024" data-quality="4k">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/movie10/300/450" alt="فيلم">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge new">جديد</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">مغامرات سندباد</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.8
-                            </span>
-                            <span>2024</span>
-                            <span>رسوم متحركة</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Movie Card 8 -->
-                <div class="content-card" data-genre="horror" data-year="2023" data-quality="hd">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/movie11/300/450" alt="فيلم">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="card-actions">
-                                <button class="action-btn" title="أضف للقائمة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                                <button class="action-btn" title="أضف للمفضلة">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <span class="card-badge">HD</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">البيت المسكون</h4>
-                        <div class="card-meta">
-                            <span class="rating">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                4.3
-                            </span>
-                            <span>2023</span>
-                            <span>رعب</span>
-                        </div>
-                    </div>
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="btn btn-secondary" id="loadMoreBtn">
+                        تحميل المزيد
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-
-            <!-- Load More Button -->
-            <div class="load-more-container">
-                <button class="btn btn-secondary" id="loadMoreBtn">
-                    تحميل المزيد
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-                    </svg>
-                </button>
-            </div>
-        </div>
     </main>
 
     <!-- Footer -->

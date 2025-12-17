@@ -102,148 +102,223 @@
         </div>
     </section>
 
+    <!-- Categorized Rows -->
     <main class="main-content">
         <div class="container">
-            <div class="content-grid" id="booksGrid">
-                <div class="content-card" data-genre="novel" data-author="naguib">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/book1/300/450" alt="كتاب">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                </svg>
-                            </button>
-                        </div>
-                        <span class="card-badge">PDF</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">زقاق المدق</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.8</span>
-                            <span>نجيب محفوظ</span>
-                        </div>
+
+            <!-- روايات مميزة -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">روايات</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="details.html?id=c7">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/book-mind/300/450" alt="كتاب العقل">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">كتاب العقل</h4>
+                            </div>
+                        </a>
+                        <a class="content-card" href="details.html?id=book2">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/book2/300/450" alt="ديوان">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">ديوان مختار</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </section>
 
-                <div class="content-card" data-genre="poetry" data-author="mahmoud">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/book2/300/450" alt="كتاب">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                </svg>
-                            </button>
-                        </div>
-                        <span class="card-badge new">جديد</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">ديوان محمود درويش</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 5.0</span>
-                            <span>محمود درويش</span>
-                        </div>
+            <!-- كتب تعليمية -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">كتب علمية وتعليمية</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="details.html?id=book3">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/book5/300/450" alt="العلوم الحديثة">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">العلوم الحديثة</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </section>
 
-                <div class="content-card" data-genre="history" data-author="taha">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/book3/300/450" alt="كتاب">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                </svg>
-                            </button>
-                        </div>
-                        <span class="card-badge">PDF</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">الأيام</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.9</span>
-                            <span>طه حسين</span>
-                        </div>
+            <!-- كتب للأطفال -->
+            <section class="content-row">
+                <div class="row-header">
+                    <h3 class="row-title">كتب الأطفال</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-slider">
+                    <div class="content-cards">
+                        <a class="content-card" href="details.html?id=book6">
+                            <div class="card-image">
+                                <img data-src="https://picsum.photos/seed/book6/300/450" alt="قصص الأطفال">
+                                <div class="card-overlay"><button class="play-btn"></button></div>
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-title">قصص الأطفال</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </section>
 
-                <div class="content-card" data-genre="novel" data-author="other">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/book4/300/450" alt="كتاب">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                </svg>
-                            </button>
+            <div class="container">
+                <div class="content-grid" id="booksGrid">
+                    <div class="content-card" data-genre="novel" data-author="naguib">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/book1/300/450" alt="كتاب">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge">PDF</span>
                         </div>
-                        <span class="card-badge">PDF</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">رواية عربية حديثة</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.7</span>
-                            <span>مؤلف عربي</span>
+                        <div class="card-info">
+                            <h4 class="card-title">زقاق المدق</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.8</span>
+                                <span>نجيب محفوظ</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="content-card" data-genre="science" data-author="other">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/book5/300/450" alt="كتاب">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                </svg>
-                            </button>
+                    <div class="content-card" data-genre="poetry" data-author="mahmoud">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/book2/300/450" alt="كتاب">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge new">جديد</span>
                         </div>
-                        <span class="card-badge">PDF</span>
-                    </div>
-                    <div class="card-info">
-                        <h4 class="card-title">العلوم الحديثة</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.6</span>
-                            <span>علوم</span>
+                        <div class="card-info">
+                            <h4 class="card-title">ديوان محمود درويش</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 5.0</span>
+                                <span>محمود درويش</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="content-card" data-genre="children" data-author="other">
-                    <div class="card-image">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
-                            data-src="https://picsum.photos/seed/book6/300/450" alt="كتاب">
-                        <div class="card-overlay">
-                            <button class="play-btn" onclick="window.location.href='details.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                </svg>
-                            </button>
+                    <div class="content-card" data-genre="history" data-author="taha">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/book3/300/450" alt="كتاب">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge">PDF</span>
                         </div>
-                        <span class="card-badge new">جديد</span>
+                        <div class="card-info">
+                            <h4 class="card-title">الأيام</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.9</span>
+                                <span>طه حسين</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h4 class="card-title">قصص الأطفال</h4>
-                        <div class="card-meta">
-                            <span class="rating">⭐ 4.8</span>
-                            <span>أطفال</span>
+
+                    <div class="content-card" data-genre="novel" data-author="other">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/book4/300/450" alt="كتاب">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge">PDF</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">رواية عربية حديثة</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.7</span>
+                                <span>مؤلف عربي</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-genre="science" data-author="other">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/book5/300/450" alt="كتاب">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge">PDF</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">العلوم الحديثة</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.6</span>
+                                <span>علوم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-genre="children" data-author="other">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>"
+                                data-src="https://picsum.photos/seed/book6/300/450" alt="كتاب">
+                            <div class="card-overlay">
+                                <button class="play-btn" onclick="window.location.href='details.html'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="card-badge new">جديد</span>
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">قصص الأطفال</h4>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 4.8</span>
+                                <span>أطفال</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer class="footer">
