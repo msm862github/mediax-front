@@ -112,6 +112,94 @@
     margin-top: var(--spacing-lg);
 }
 
+/* Settings/profile page grid and sidebar responsive fixes */
+.page-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .page-grid {
+        display: block;
+    }
+
+    .page-grid .sidebar {
+        width: 100%;
+        margin-bottom: var(--spacing-lg);
+        padding: 0.75rem 0.5rem !important;
+    }
+
+    .page-grid .sidebar .sidebar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+        overflow-x: auto !important;
+        padding-bottom: 0.25rem !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .page-grid .sidebar .sidebar-nav a {
+        white-space: nowrap;
+        flex: 0 0 auto;
+        padding: 0.6rem 0.9rem !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border-radius: var(--radius-md) !important;
+        display: inline-block !important;
+        color: var(--text-primary) !important;
+        font-weight: 600;
+    }
+
+    .page-grid>div:last-child {
+        width: 100%;
+    }
+
+    /* Mobile: make sidebar act like a horizontal tab bar */
+    .page-grid .sidebar {
+        background: transparent !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .page-grid .sidebar .sidebar-nav {
+        gap: 0.5rem !important;
+        padding: 0.5rem 1rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        margin-bottom: 1rem;
+        scroll-snap-type: x proximity;
+    }
+
+    .page-grid .sidebar .sidebar-nav a {
+        padding: 0.6rem 0.9rem !important;
+        background: transparent !important;
+        border: 1px solid rgba(255, 255, 255, 0.04) !important;
+        color: var(--text-primary) !important;
+        font-weight: 600;
+        scroll-snap-align: start;
+        transition: background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .page-grid .sidebar .sidebar-nav a.active,
+    .page-grid .sidebar .sidebar-nav a[aria-current="true"] {
+        background: var(--primary-color) !important;
+        color: #fff !important;
+        border-color: var(--primary-color) !important;
+    }
+
+    .page-grid .sidebar .sidebar-nav::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .page-grid .sidebar .sidebar-nav::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+    }
+
+    .page-grid>div:last-child {
+        padding-top: 0;
+    }
+}
+
 .category-card {
     background: var(--bg-card);
     padding: 2rem;
